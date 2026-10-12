@@ -20,7 +20,7 @@ a { color:var(--nl-green) }
 nav { background:var(--nl-green); color:var(--nl-cream); padding:22px 16px; display:flex; flex-direction:column; gap:4px; position:sticky; top:0; height:100vh }
 nav .brand { display:flex; align-items:center; gap:12px; padding:2px 8px 22px; color:var(--nl-white); text-decoration:none }
 nav .brand img { width:44px; height:44px }
-nav .brand .name { font-family:var(--nl-font-display); font-size:22px; line-height:1.05 }
+nav .brand .name { font-family:var(--nl-font-display); font-size:20px; line-height:1.05; white-space:nowrap }
 nav .brand small { display:block; font-family:var(--nl-font-heading); font-weight:600; font-size:10.5px; letter-spacing:var(--nl-tracking-wide); text-transform:uppercase; color:var(--nl-cream); opacity:.75; margin-top:4px }
 nav .group { font-family:var(--nl-font-heading); font-size:11px; letter-spacing:var(--nl-tracking-wide); text-transform:uppercase; color:var(--nl-cream); opacity:.7; padding:16px 10px 6px }
 nav a.item { display:flex; align-items:center; gap:10px; padding:9px 12px; border-radius:var(--nl-radius-sm); color:var(--nl-cream); text-decoration:none; font-family:var(--nl-font-heading); font-weight:500; font-size:14px }
