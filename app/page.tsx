@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"; // live numbers from the tools on every request
+
 import { tools } from "@/lib/tools";
 import { videoStatus } from "@/lib/video";
 
