@@ -19,7 +19,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <div className="shell">
           <nav>
-            <Link className="brand" href="/"><span className="dot">N</span><span>Naturalite OS<small>INTERNAL TOOLS</small></span></Link>
+            <Link className="brand" href="/"><img src="/marks/promise-cream.svg" alt="" /><span><span className="name">Naturalite OS</span><small>Internal tools</small></span></Link>
             <NavItem href="/" label="Home" />
             <div className="group">Tools</div>
             {tools.filter(t => t.href).map(t => <NavItem key={t.slug} href={t.href!} label={t.name} soon={t.status !== "live"} />)}
