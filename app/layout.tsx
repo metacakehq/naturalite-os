@@ -26,10 +26,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <div className="shell">
           <nav>
             <Link className="brand" href="/"><img src="/brand/naturalite-logo.png" alt="Naturalite" /><small>Internal tools</small></Link>
-            <NavItem href="/" label="Home" />
+            <NavItem href="/" label="Home" icon="home" />
             <div className="group">Tools</div>
-            {tools.filter(t => t.href).map(t => <NavItem key={t.slug} href={t.href!} label={t.name} soon={t.status !== "live"} />)}
-            <div className="foot">{foot}</div>
+            {tools.filter(t => t.href).map(t => <NavItem key={t.slug} href={t.href!} label={t.name} soon={t.status !== "live"} icon={t.slug} />)}
+            <div className="foot"><span className={"dot" + (s ? "" : " off")} />{foot}</div>
           </nav>
           <div className="content">{children}</div>
         </div>
