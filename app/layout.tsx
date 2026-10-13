@@ -7,7 +7,11 @@ import { tools } from "@/lib/tools";
 import { videoStatus } from "@/lib/video";
 import { NavItem } from "./nav-item";
 
-export const metadata: Metadata = { title: "Naturalite OS", description: "Every internal Naturalite tool in one place." };
+export const metadata: Metadata = {
+  title: "Naturalite OS",
+  description: "Every internal Naturalite tool in one place.",
+  icons: { icon: "/favicon.png", apple: "/apple-touch-icon.png" },
+};
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const s = await videoStatus();
@@ -21,7 +25,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body>
         <div className="shell">
           <nav>
-            <Link className="brand" href="/"><img src="/marks/promise-cream.svg" alt="" /><span><span className="name">Naturalite OS</span><small>Internal tools</small></span></Link>
+            <Link className="brand" href="/"><img src="/brand/naturalite-logo.png" alt="Naturalite" /><small>Internal tools</small></Link>
             <NavItem href="/" label="Home" />
             <div className="group">Tools</div>
             {tools.filter(t => t.href).map(t => <NavItem key={t.slug} href={t.href!} label={t.name} soon={t.status !== "live"} />)}
